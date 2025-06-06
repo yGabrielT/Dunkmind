@@ -1,0 +1,253 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+//bg-home
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #011129), url("../assets_imag/imagemfundo.avif");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+//hero 
+
+.hero{
+    color: $branco-dark;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 768px){
+  .hero{
+    min-height: 60vh;
+
+    h1{
+      font-size: 34px;
+      padding: 0 14px;
+      width: 100%;
+    }
+}
+}
+
+@media screen and (max-width: 480px){
+  .hero h1{
+    font-size: 24px;
+  }
+}
+
+// -------------------
+
+// about
+
+.about {
+  background-color: $primary-dark;
+  overflow: hidden;
+  color: $branco-dark;
+}
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+      max-width: 100%;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    div {
+      flex: 1 1 300px;
+    }
+  }
+
+  .about-description {
+    h2 {
+      font-size: 38px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+  .about-content{
+    flex-direction: column;
+  }
+}
+
+.products {
+  background-color: $primary-dark;
+  color: $branco-dark;
+  padding: 64px 14px;
+
+  .products-content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    .product-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-info {
+      flex: 1;
+
+      h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        color: $amarelo-normal;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .product-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: $amarelo-normal;
+        color: $black-dark;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $amarelo-dark;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .product {
+      flex-direction: column;
+      text-align: center;
+
+      .product-img {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .product-info {
+        h2 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $cor-fundo-escura;
+  color: $cor-texto-clara;
+  padding: 40px 20px;
+  text-align: center;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-branding {
+    h2 {
+      font-size: 28px;
+      color: $cor-destaque-amarelo;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 16px;
+
+    .icon {
+      background-color: $cor-detalhe-azul;
+      color: $cor-texto-clara;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 20px;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $cor-destaque-amarelo;
+        color: $cor-fundo-escura;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .footer-copy {
+    p {
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  }
+}
+
+
